@@ -1,0 +1,106 @@
+<!-- 全体 -->
+<div class="mx-10 w-full">
+  <!--部屋表示部分-->
+  <div class="my-5">
+    <div class="card w-full bg-base-100 bg-neutral shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title"><%= gettext "%{pet_name}のお部屋", pet_name: "ねこぱっち" %></h2>
+      </div>
+      <!--<figure><img src={Routes.static_path(@conn, "/images/kuchipacchi.jpg")}></figure>-->
+      <div class="mb-3">
+      <iframe width="640px" height="327px" id="webgl-frame" src="https://object-storage.tyo1.conoha.io/v1/nc_df3bdbc45bc04950b558834f5728517a/unityroom_production/game/37021/webgl/play.html"></iframe>
+      </div>
+    <div>
+
+    </div>
+    </div>
+  </div>
+
+
+  <div class="card w-full bg-base-100 shadow-2xl">
+    <div class="card-body">
+      <div class="card-actions">
+        <div class="w-full h-fit flex flex-row justify-evenly space-x-5">
+          <div class="">
+            <button class="btn btn-lg btn-secondary">　　遊ぶ　　</button>
+          </div>
+          <div class="">
+            <button class="btn btn-lg btn-primary" id="btnAdd">ご飯をあげる</button>
+          </div>
+          <div class="">
+            <button class="btn btn-lg btn-accent">　掃除をする　</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--コマンド部分-->
+
+  <div class="w-full h-fit my-5 flex flex-row space-x-5">
+    <div class="card w-1/2 bg-primary text-primary-content shadow-2xl">
+      <div class="card-body">
+        <h2 class="card-title">今日のお世話</h2>
+        <p><a class="text-lg">朝</a></p>
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content text-lg">朝ごはん</span>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content text-lg">掃除をする</span>
+          </label>
+        </div>
+
+        <p><a class="text-lg">夜</a></p>
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content text-lg">夜ごはん</span>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content text-lg">遊ぶ</span>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content text-lg">掃除をする</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-1/2 flex flex-col space-y-5">
+      <div class="card bg-accent text-primary-content shadow-2xl">
+        <div class="card-body">
+          <h2 class="card-title"><%= gettext "%{pet_name}にかかったお金", pet_name: "ねこぱっち" %></h2>
+          <p><%= gettext "これまで%{pet_name}の生活にかかったお金は", pet_name: "Phoenix" %></p>
+          <h2 class="card-title flex justify-center" id="counter">0</h2>
+
+        </div>
+      </div>
+
+      <div class="card bg-secondary text-primary-content shadow-2xl">
+        <div class="card-body">
+          <h2 class="card-title">これまでのお世話</h2>
+          <p>これまでのお世話について確認できます．</p>
+          <div class="card-actions justify-end">
+          <a href="/calender">
+            <button class="btn">More</button>
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

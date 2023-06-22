@@ -1,0 +1,21 @@
+<!-- 全体 -->
+<div class="mx-10 w-full">
+  <!--部屋表示部分-->
+  <div class="my-5">
+    <div class="card w-full bg-base-100 bg-neutral shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title"><%= gettext "%{pet_name}のお部屋", pet_name: "Phoenix" %></h2>
+        <p>example</p>
+      </div>
+      <figure><img src={Routes.static_path(@conn, "/images/kuchipacchi.jpg")}></figure>
+    </div>
+  </div>
+
+  <div class="w-full flex flex-col space-y-5">
+    <div class="card bg-accent text-primary-content shadow-2xl">
+      <div class="card-body">
+        <h2 class="card-title">お金管理</h2>
+      </div>
+    </div>
+  </div>
+</div>
